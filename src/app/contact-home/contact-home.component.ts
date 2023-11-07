@@ -16,7 +16,7 @@ export class ContactHomeComponent implements OnInit {
 
   constructor( private contactsService: ContactsService ) {};
 
-  ngOnInit(): void { throw new Error('Method not implemented'); }
+  ngOnInit(): void { this.contactsService.getContacts().subscribe(data => {this.contacts = data}); }
 
   displayedColumns: string[] = ['id', 'name', 'surname1', 'surname2', 'phone', 'email'];
   

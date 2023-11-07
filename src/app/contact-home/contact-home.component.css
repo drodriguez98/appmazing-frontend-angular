@@ -1,11 +1,18 @@
 table {
     margin: 20px 0px 0px 40px;
     width: calc(100% - 80px);
+    border: 2px solid rgb(163, 88, 163);
+    border-radius: 5px;
 }
 
-table th, table td { text-align: center;}
+table th, table td { text-align: center; }
 
 table th { 
-    color: red; 
+    
+    font-size: 14.5px; 
+    background-color: black;
     font-weight: bold;
+    color: rgb(163, 88, 163);
+
 }
+table td { font-size: 13.5px; }

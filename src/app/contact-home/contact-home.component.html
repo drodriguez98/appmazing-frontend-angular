@@ -1,0 +1,62 @@
+<!-- Angular material table for contacts -->
+
+<table mat-table [dataSource]="contacts" class="mat-elevation-z8">
+  
+    <!-- ID column -->
+
+    <ng-container matColumnDef="id">
+
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let contact"> {{contact.id}} </td>
+
+    </ng-container>
+  
+    <!-- Name column -->
+
+    <ng-container matColumnDef="name">
+
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let contact"> {{contact.name}} </td>
+
+    </ng-container>
+  
+    <!-- Surname 1 column -->
+
+    <ng-container matColumnDef="surname1">
+
+      <th mat-header-cell *matHeaderCellDef> Surname 1 </th>
+      <td mat-cell *matCellDef="let contact"> {{contact.surname1}} </td>
+
+    </ng-container>
+  
+    <!-- Surname 2 column -->
+
+    <ng-container matColumnDef="surname2">
+
+      <th mat-header-cell *matHeaderCellDef> Surname 2 </th>
+      <td mat-cell *matCellDef="let contact"> {{contact.surname2}} </td>
+
+    </ng-container>
+
+    <!-- Phone column -->
+
+    <ng-container matColumnDef="phone">
+
+        <th mat-header-cell *matHeaderCellDef> Phone </th>
+        <td mat-cell *matCellDef="let contact"> {{contact.phone}} </td>
+  
+    </ng-container>
+
+    <!-- Email column -->
+
+    <ng-container matColumnDef="email">
+
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let contact"> {{contact.email}} </td>
+  
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>

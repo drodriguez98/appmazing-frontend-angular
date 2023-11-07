@@ -1,0 +1,11 @@
+table {
+    margin: 20px 0px 0px 40px;
+    width: calc(100% - 80px);
+}
+
+table th, table td { text-align: center;}
+
+table th { 
+    color: red; 
+    font-weight: bold;
+}

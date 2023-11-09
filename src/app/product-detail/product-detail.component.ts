@@ -22,4 +22,4 @@ export class ProductDetailComponent implements OnInit {
 
   }
 
-}s
+}

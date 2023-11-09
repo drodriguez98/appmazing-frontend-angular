@@ -1,11 +1,16 @@
-.card { 
-    margin: 20px 40px 0px 40px; 
+mat-card { 
+    width: 25%;
+    text-align: center;
+    padding: 35px;
+    margin: 75px auto;
     border: 2px solid rgb(80, 22, 80);
 }
 
-.card-content p {
+mat-card-title { margin-bottom: 30px; }
+
+mat-card-content p {
     display: flex;
-    align-items: center;
+    margin: 15px 25px;
 }
 
-.card-content p mat-icon, .card-content p strong { margin-right: 10px; }
+mat-card-content p mat-icon, mat-card-content p strong { margin-right: 10px; }

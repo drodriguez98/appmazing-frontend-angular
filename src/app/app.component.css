@@ -13,6 +13,11 @@ app-root[_nghost-cpw-c0] { background-color: black; }
     font-family: 'Space Grotesk', sans-serif;
 }
 
+.mat-toolbar.mat-primary a:hover { 
+    color: rgb(211 179 62); /* Cambia el color del texto al pasar el ratón por encima */
+    transition: color 0.5s; /* Agrega una transición de color */
+}
+
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;

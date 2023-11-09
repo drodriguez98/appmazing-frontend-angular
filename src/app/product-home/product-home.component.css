@@ -13,11 +13,17 @@ table th, table td {
     text-align: center; 
     font-family: 'Abel', sans-serif;
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 15px;
-
+    font-size: 15px
 }
 
 table th { 
     background: rgba(99, 2, 2, 0.911);
     color: white;
+}
+
+table tr:hover { background-color: rgba(240, 217, 217, 0.74); }
+
+table th:hover {
+    color: rgb(211 179 62); /* Cambia el color del texto al pasar el ratón por encima */
+    transition: color 0.5s; /* Agrega una transición de color */ 
 }

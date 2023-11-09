@@ -1,1 +1,60 @@
-<p>contact-new works!</p>
+<mat-card class="card">
+
+    <mat-card-title>Add contact</mat-card-title>
+
+    <mat-card-content class="card-content">
+
+        <form (submit)="newContact()">
+
+            <mat-form-field appearance="outline">
+
+                <mat-label>Name</mat-label>
+
+                <input matInput type="text" name="name" [(ngModel)]="name"/>
+
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+
+                <mat-label>Surname 1</mat-label>
+
+                <input matInput type="text" name="surname1" [(ngModel)]="surname1"/>
+
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+
+                <mat-label>Surname 2</mat-label>
+
+                <input matInput type="text" name="surname2" [(ngModel)]="surname2"/>
+
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+
+                <mat-label>Phone</mat-label>
+
+                <input matInput type="text" name="phone" [(ngModel)]="phone"/>
+
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+
+                <mat-label>Email</mat-label>
+
+                <input matInput type="email" name="email" [(ngModel)]="email"/>
+
+            </mat-form-field>
+
+            <div class="buttons">
+
+                <button mat-raised-button color="primary" type="submit"><mat-icon>save</mat-icon></button>
+                <button mat-raised-button color="warn" type="button" (click)="cancelInsert()"><mat-icon>cancel</mat-icon></button>
+
+            </div>
+
+        </form>
+
+    </mat-card-content>
+
+</mat-card>

@@ -1,0 +1,73 @@
+<!-- Angular material table for contacts -->
+
+<table mat-table [dataSource]="products" class="mat-elevation-z8">
+  
+    <!-- ID column -->
+
+    <ng-container matColumnDef="id">
+
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let product"> {{product.id}} </td>
+
+    </ng-container>
+  
+    <!-- Name column -->
+
+    <ng-container matColumnDef="name">
+
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let product"> {{product.name}} </td>
+
+    </ng-container>
+  
+    <!-- Stock column -->
+
+    <ng-container matColumnDef="stock">
+
+      <th mat-header-cell *matHeaderCellDef> Stock </th>
+      <td mat-cell *matCellDef="let product"> {{product.stock}} </td>
+
+    </ng-container>
+  
+    <!-- Price column -->
+
+    <ng-container matColumnDef="price">
+
+      <th mat-header-cell *matHeaderCellDef> Price </th>
+      <td mat-cell *matCellDef="let product"> {{product.price}} </td>
+
+    </ng-container>
+
+    <!-- Active column -->
+
+    <ng-container matColumnDef="active">
+
+        <th mat-header-cell *matHeaderCellDef> Active </th>
+        <td mat-cell *matCellDef="let product"> {{product.active}} </td>
+  
+    </ng-container>
+
+    <!-- Date added column -->
+
+    <ng-container matColumnDef="date_added">
+
+        <th mat-header-cell *matHeaderCellDef> Date addedd </th>
+        <td mat-cell *matCellDef="let product"> {{product.date_added}} </td>
+  
+    </ng-container>
+
+        <!-- Category column -->
+
+    <ng-container matColumnDef="category_id">
+
+        <th mat-header-cell *matHeaderCellDef> Category-ID </th>
+        <td mat-cell *matCellDef="let product">{{ product.category_id?.name}}</td>
+
+        <!-- <span *ngIf="product.category_id !== null">{{ product.category_id.name }}</span> -->
+    
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="openDetailForm(row)"></tr>
+
+  </table>

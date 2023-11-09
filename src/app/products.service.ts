@@ -4,13 +4,13 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 
-export class ContactsService {
+export class ProductsService {
 
   constructor(private http: HttpClient) {}
 
-  getContacts(): Observable<any> {
+  getProducts(): Observable<any> {
 
-    const url = 'http://localhost:30030/contacts/getAll';
+    const url = 'http://localhost:30030/products/getAll';
 
     const headers = new HttpHeaders();
 
@@ -18,9 +18,9 @@ export class ContactsService {
 
   }
 
-  getContact(c_id: number): Observable<any> {
+  getProduct(c_id: number): Observable<any> {
 
-    const url = 'http://localhost:30030/contacts/get';
+    const url = 'http://localhost:30030/products/get';
 
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
 

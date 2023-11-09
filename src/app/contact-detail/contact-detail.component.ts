@@ -20,5 +20,5 @@ export class ContactDetailComponent implements OnInit {
     this.contactsService.getContact(this.route.snapshot.params['id']).subscribe(data => { this.contact = data })
 
   }
-s
+
 }

@@ -1,29 +1,49 @@
+#newContactButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    margin-top: 40px;
+}
+
+#newContactButtonContainer a {
+    border: 1px solid rgba(99, 2, 2, 0.911);
+    color:rgba(99, 2, 2, 0.911);
+    transform: scale(1); /* Escala normal */
+    transition: transform 0.1s ease-in-out;
+    font-family: 'Abel', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+#newContactButtonContainer a:hover { transform: scale(1.02); }
+
 table {
     margin: 50px auto;
-    width: 1200px;
+    width: 50%;
     border-radius: 5px;
     transform: scale(1); /* Escala normal */
     transition: transform 0.5s ease-in-out;
-    border: 2px solid rgba(99, 2, 2, 0.911);
+    border: 1px solid rgba(99, 2, 2, 0.911);
 }
-
-table:hover { transform: scale(1.02); }
 
 table th, table td { 
     text-align: center; 
     font-family: 'Abel', sans-serif;
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 15px
 }
 
 table th { 
     background: rgba(99, 2, 2, 0.911);
     color: white;
+    font-size: 15px
 }
+
+table td { font-size: 14px;}
+
+table:hover { transform: scale(1.02); }
 
 table tr:hover { background-color: rgba(240, 217, 217, 0.74); }
 
 table th:hover {
-    color: rgb(211 179 62); /* Cambia el color del texto al pasar el ratón por encima */
-    transition: color 0.5s; /* Agrega una transición de color */ 
+    color: rgb(211 179 62);
+    transition: color 0.5s; 
 }

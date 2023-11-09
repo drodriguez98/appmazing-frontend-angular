@@ -1,13 +1,16 @@
 table {
     margin: 50px auto;
-    width: 1200px;
+    width: 50%;
     border-radius: 5px;
     transform: scale(1); /* Escala normal */
     transition: transform 0.5s ease-in-out;
-    border: 2px solid rgba(99, 2, 2, 0.911);
+    border: 1px solid rgba(99, 2, 2, 0.911);
 }
 
-table:hover { transform: scale(1.02); }
+table th { 
+    background: rgba(99, 2, 2, 0.911);
+    color: white;
+}
 
 table th, table td { 
     text-align: center; 
@@ -16,10 +19,7 @@ table th, table td {
     font-size: 15px
 }
 
-table th { 
-    background: rgba(99, 2, 2, 0.911);
-    color: white;
-}
+table:hover { transform: scale(1.02); }
 
 table tr:hover { background-color: rgba(240, 217, 217, 0.74); }
 

@@ -1,18 +1,23 @@
 table {
-    margin: 20px 0px 0px 40px;
-    width: calc(100% - 80px);
-    border: 2px solid rgb(80, 22, 80);
+    margin: 50px auto;
+    width: 1200px;
     border-radius: 5px;
+    transform: scale(1); /* Escala normal */
+    transition: transform 0.5s ease-in-out;
+    border: 2px solid rgba(99, 2, 2, 0.911);
 }
 
-table th, table td { text-align: center; }
+table:hover { transform: scale(1.02); }
+
+table th, table td { 
+    text-align: center; 
+    font-family: 'Abel', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+
+}
 
 table th { 
-    
-    font-size: 14.5px; 
-    font-weight: bold;
-    background: rgb(77, 42, 77);
-    color: #fff;
+    background: rgba(99, 2, 2, 0.911);
+    color: white;
 }
-
-table td { font-size: 13.5px; }

@@ -1,5 +1,20 @@
+app-root[_nghost-cpw-c0] { background-color: black; }
+
 .mat-toolbar.mat-primary {
     justify-content: center;
-    background: rgb(80, 22, 80);
-    color: #fff;
+    background: rgba(99, 2, 2, 0.911);
+    color: white;
+    padding: 40px;
+}
+
+.mat-toolbar.mat-primary a { 
+    font-size: 18px; 
+    font-family: 'Abel', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: rgba(240, 217, 217, 0.74);
 }

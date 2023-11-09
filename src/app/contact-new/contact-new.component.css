@@ -1,8 +1,15 @@
-.card { margin: 20px 40px 0px 40px; }
+.card { 
+    margin: 50px 35%; 
+    border: 1px solid rgba(99, 2, 2, 0.911);
+    text-align: center;
+}
+
+mat-card-title { margin: 30px; }
 
 form {
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 .buttons {
@@ -10,4 +17,4 @@ form {
     justify-content: flex-end;
 }
 
-.buttons button { margin-left: 1%; }
+.buttons button { margin-left: 4%; }

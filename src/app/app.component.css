@@ -1,4 +1,10 @@
-app-root[_nghost-cpw-c0] { background-color: black; }
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 .mat-toolbar.mat-primary {
     justify-content: center;
@@ -16,10 +22,4 @@ app-root[_nghost-cpw-c0] { background-color: black; }
 .mat-toolbar.mat-primary a:hover { 
     color: rgb(211 179 62); /* Cambia el color del texto al pasar el ratón por encima */
     transition: color 0.5s; /* Agrega una transición de color */
-}
-
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    background-color: rgba(240, 217, 217, 0.74);
 }

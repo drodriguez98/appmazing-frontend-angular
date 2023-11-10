@@ -20,6 +20,6 @@ body {
 }
 
 .mat-toolbar.mat-primary a:hover { 
-    color: rgb(211 179 62); /* Cambia el color del texto al pasar el ratón por encima */
-    transition: color 0.5s; /* Agrega una transición de color */
+    color: rgb(211 179 62); 
+    transition: color 0.5s; 
 }

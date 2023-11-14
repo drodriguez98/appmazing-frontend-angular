@@ -16,17 +16,12 @@ export class ProductHomeComponent implements OnInit {
 
   constructor( private productsService: ProductsService, private router: Router ) { }
 
-  ngOnInit(): void { 
-    
-    this.productsService.getProducts().subscribe(data => {
-      
-      this.products = data
-    
-    }); 
-  }
+  ngOnInit(): void { this.productsService.getProducts().subscribe(data => { this.products = data }); }
 
   openDetailForm(row:any) { this.router.navigate(['/product', row.id]); }
 
-  displayedColumns: string[] = ['id', 'name', 'stock', 'price', 'active', 'date_added', 'category_id'];
+  editProductDetail(product: any) { this.router.navigate(['/product/edit', product]); }
+
+  displayedColumns: string[] = ['id', 'name', 'stock', 'price', 'active', 'date_added', 'category_id', 'actions'];
 
 }

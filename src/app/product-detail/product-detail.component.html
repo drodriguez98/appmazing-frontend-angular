@@ -9,9 +9,16 @@
         <p> <mat-icon>trending_flat</mat-icon> <strong>Stock: </strong> {{ product.stock }} </p>
         <p> <mat-icon>trending_flat</mat-icon> <strong>Price: </strong> {{ product.price}} </p>
         <p> <mat-icon>trending_flat</mat-icon> <strong>Active: </strong> {{ product.active }} </p>
-        <p> <mat-icon>trending_flat</mat-icon> <strong>Date added: </strong> {{ product.date_added }} </p>
+        <p> <mat-icon>trending_flat</mat-icon> <strong>Date added: </strong> {{product.date_added | date:'yyyy/MM/dd' }} </p>
         <p> <mat-icon>trending_flat</mat-icon> <strong>Category: </strong> {{ product.category_id?.name}} </p>
         
     </mat-card-content>
+
+    <mat-card-actions align="end">
+
+        <button mat-raised-button type="button" (click)="editProduct()"><mat-icon>edit</mat-icon></button>
+        <button mat-raised-button type="button" (click)="closeProduct()"><mat-icon>close</mat-icon></button>
+
+    </mat-card-actions>
 
 </mat-card>

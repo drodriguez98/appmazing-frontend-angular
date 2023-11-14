@@ -14,6 +14,7 @@ import { ProductNewComponent } from './product-new/product-new.component';
 import { MatSelectModule } from '@angular/material/select';
 
 import { AppComponent } from './app.component';
+import { ContactEditComponent } from './contact-edit/contact-edit.component';
 
 @NgModule({
 
@@ -26,6 +27,7 @@ import { AppComponent } from './app.component';
     ProductDetailComponent,
     ContactNewComponent,
     ProductNewComponent,
+    ContactEditComponent,
 
   ],
 

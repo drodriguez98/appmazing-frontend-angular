@@ -11,9 +11,7 @@ export class ContactsService {
   getContacts(): Observable<any> {
 
     const url = 'http://localhost:30030/contacts/getAll';
-
     const headers = new HttpHeaders();
-
     return this.http.get<any>(url, {headers})
 
   }
@@ -21,11 +19,8 @@ export class ContactsService {
   getContact(c_id: number): Observable<any> {
 
     const url = 'http://localhost:30030/contacts/get';
-
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
-
     const body = JSON.stringify({id: c_id});
-
     return this.http.post(url, body, {headers});
 
   }
@@ -33,12 +28,18 @@ export class ContactsService {
   newContact(contact : any): void {
 
     const url = 'http://localhost:30030/contacts/add';
-
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
-
     const body = contact;
-
     this.http.post(url, body, { headers }).subscribe();
+
+  }
+
+  editContact(contact : any): void {
+
+    const url = 'http://localhost:30030/contacts/update';
+    const body = contact;
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+    this.http.put(url, body,{headers}).subscribe();
 
   }
 

@@ -21,6 +21,8 @@ export class ContactHomeComponent implements OnInit {
 
   openDetailForm(row:any) { this.router.navigate(['/contact', row.id]); }
 
-  displayedColumns: string[] = ['id', 'name', 'surname1', 'surname2', 'phone', 'email'];
+  editContactDetail(contact: any) { this.router.navigate(['/contact/edit', contact]); }
+
+  displayedColumns: string[] = [ 'id', 'name', 'surname1', 'surname2', 'phone', 'email', 'actions' ];
   
 }

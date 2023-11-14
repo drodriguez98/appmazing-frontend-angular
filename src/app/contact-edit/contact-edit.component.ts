@@ -7,6 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './contact-edit.component.html',
   styleUrls: ['./contact-edit.component.css']
 })
+
 export class ContactEditComponent implements OnInit {
 
   contact: any;

@@ -42,6 +42,15 @@ export class ProductsService {
 
   }
 
+  editProduct(product : any): void {
+
+    const url = 'http://localhost:30030/products/update';
+    const body = product;
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+    this.http.put(url, body,{headers}).subscribe();
+
+  }
+
   getCategories(): Observable<any> {
 
     const url = 'http://localhost:30030/categories/getAll';

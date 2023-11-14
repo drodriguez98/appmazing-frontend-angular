@@ -1,0 +1,20 @@
+.card { 
+    margin: 50px 35%; 
+    border: 1px solid rgba(99, 2, 2, 0.911);
+    text-align: center;
+}
+
+mat-card-title { margin: 30px; }
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttons button { margin-left: 4%; }

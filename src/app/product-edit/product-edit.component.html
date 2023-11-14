@@ -52,10 +52,21 @@
 
             <mat-radio-group name="active" [(ngModel)]="product.active">
 
-                <mat-radio-button value="true">Active</mat-radio-button>
-                <mat-radio-button value="false">Not Active</mat-radio-button>
+                <ng-container *ngIf="product.active === true; ">
+
+                    <mat-radio-button [value]="true">Active</mat-radio-button>
+                    <mat-radio-button [value]="false">Not Active</mat-radio-button>
+
+                </ng-container>
+
+                <ng-container *ngIf="product.active === false";>
+
+                    <mat-radio-button [value]="true">Active</mat-radio-button>
+                    <mat-radio-button [value]="false">Not Active</mat-radio-button>
+
+                </ng-container>
                 
-            </mat-radio-group>
+              </mat-radio-group>
             
             <div class="buttons">
 

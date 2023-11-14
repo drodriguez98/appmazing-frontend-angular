@@ -17,13 +17,10 @@ export class ProductEditComponent implements OnInit {
 
   ngOnInit() { 
     
-    this.productService.getProduct(this.route.snapshot.params['id']).subscribe(data => { 
-      this.product = data; });
+    this.productService.getProduct(this.route.snapshot.params['id']).subscribe(data => { this.product = data; });
 
     this.productService.getCategories().subscribe(data => { this.categories = data });
 
-    
-  
   }
 
   editProduct(): void {

@@ -16,6 +16,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { AppComponent } from './app.component';
 import { ContactEditComponent } from './contact-edit/contact-edit.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { CommonModule, DatePipe } from '@angular/common';
 
 @NgModule({
 
@@ -47,11 +48,13 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
     FormsModule,
     MatInputModule,
     MatSelectModule,
-    MatRadioModule
+    MatRadioModule, 
+    CommonModule
 
   ],
 
-  providers: [],
+  providers: [ DatePipe ],
+  
   bootstrap: [AppComponent]
 
 })

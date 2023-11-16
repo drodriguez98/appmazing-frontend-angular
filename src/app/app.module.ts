@@ -38,7 +38,7 @@ import { ProductDeleteComponent } from './product-delete/product-delete.componen
 
   ],
 
-  entryComponents: [ ContactDeleteComponent ],
+  entryComponents: [ ContactDeleteComponent, ProductDeleteComponent ],
 
   imports: [
 

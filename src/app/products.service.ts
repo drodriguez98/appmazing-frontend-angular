@@ -11,9 +11,7 @@ export class ProductsService {
   getProducts(): Observable<any> {
 
     const url = 'http://localhost:30030/products/getAll';
-
     const headers = new HttpHeaders();
-
     return this.http.get<any>(url, {headers})
 
   }
@@ -21,11 +19,8 @@ export class ProductsService {
   getProduct(c_id: number): Observable<any> {
 
     const url = 'http://localhost:30030/products/get';
-
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
-
     const body = JSON.stringify({id: c_id});
-
     return this.http.post(url, body, {headers});
 
   }
@@ -33,11 +28,8 @@ export class ProductsService {
   newProduct(product : any): void {
 
     const url = 'http://localhost:30030/products/add';
-
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
-
     const body = product;
-
     this.http.post(url, body, { headers }).subscribe();
 
   }
@@ -54,11 +46,21 @@ export class ProductsService {
   getCategories(): Observable<any> {
 
     const url = 'http://localhost:30030/categories/getAll';
-
     const headers = new HttpHeaders();
-
     return this.http.get<any>(url, {headers})
 
+  }
+
+  deleteProduct (productId: number): void {
+
+    const url = 'http://localhost:30030/products/delete';
+    const body = { id: productId };
+    const options = {
+      body: body,
+      headers: new HttpHeaders()
+    };
+    this.http.delete(url, options).subscribe();
+    
   }
 
 }

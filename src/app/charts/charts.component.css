@@ -1,4 +1,13 @@
-.card { margin: 20px 40px 0 40px; }
+.ng-star-inserted { display: flex; }
+
+.card { 
+    margin: 60px auto; 
+    width: 75%;
+    box-shadow: 0 0 6px 3px rgba(94, 41, 41, 0.911);
+    transform: scale(1); 
+}
+
+.mat-card-title { padding: 40px;}
 
 .chart-row {
     display: flex;
@@ -6,3 +15,5 @@
     justify-content: space-around;
     align-items: center;
 }
+
+.card:hover { transform: scale(1.02); }

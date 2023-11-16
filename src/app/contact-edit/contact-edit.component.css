@@ -1,9 +1,10 @@
-.card { 
-    margin: 50px 35%; 
-    border: 1px solid rgba(99, 2, 2, 0.911);
+.card {  
+    width: 25%;
     text-align: center;
+    padding: 35px;
+    margin: 75px auto;
+    box-shadow: 0 0 6px 3px rgba(94, 41, 41, 0.911);
 }
-
 mat-card-title { margin: 30px; }
 
 form {

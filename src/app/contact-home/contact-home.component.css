@@ -22,7 +22,7 @@ table {
     border-radius: 5px;
     transform: scale(1); /* Escala normal */
     transition: transform 0.5s ease-in-out;
-    border: 1px solid rgba(99, 2, 2, 0.911);
+    box-shadow: 0 0 6px 3px rgba(94, 41, 41, 0.911);
 }
 
 table th, table td { 

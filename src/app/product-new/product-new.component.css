@@ -1,7 +1,7 @@
 .card { 
     margin: 50px 35%; 
-    border: 1px solid rgba(99, 2, 2, 0.911);
     text-align: center;
+    box-shadow: 0 0 6px 3px rgba(94, 41, 41, 0.911);
 }
 
 mat-card-title { margin: 30px; }

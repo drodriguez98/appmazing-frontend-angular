@@ -1,9 +1,9 @@
-mat-card { 
+.card {  
     width: 25%;
     text-align: center;
     padding: 35px;
     margin: 75px auto;
-    border: 2px solid rgb(80, 22, 80);
+    box-shadow: 0 0 6px 3px rgba(94, 41, 41, 0.911);
 }
 
 mat-card-title { margin-bottom: 30px; }

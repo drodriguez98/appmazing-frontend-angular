@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCardModule, MatCheckboxModule, MatIconModule, MatInputModule, MatRadioModule, MatTableModule, MatToolbarModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatCheckboxModule, MatDialogModule, MatIconModule, MatInputModule, MatRadioModule, MatTableModule, MatToolbarModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactHomeComponent } from './contact-home/contact-home.component';
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
@@ -17,6 +17,8 @@ import { AppComponent } from './app.component';
 import { ContactEditComponent } from './contact-edit/contact-edit.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { CommonModule, DatePipe } from '@angular/common';
+import { ContactDeleteComponent } from './contact-delete/contact-delete.component';
+import { ProductDeleteComponent } from './product-delete/product-delete.component';
 
 @NgModule({
 
@@ -31,8 +33,12 @@ import { CommonModule, DatePipe } from '@angular/common';
     ProductNewComponent,
     ContactEditComponent,
     ProductEditComponent,
+    ContactDeleteComponent,
+    ProductDeleteComponent,
 
   ],
+
+  entryComponents: [ ContactDeleteComponent ],
 
   imports: [
 
@@ -49,7 +55,8 @@ import { CommonModule, DatePipe } from '@angular/common';
     MatInputModule,
     MatSelectModule,
     MatRadioModule, 
-    CommonModule
+    CommonModule,
+    MatDialogModule
 
   ],
 

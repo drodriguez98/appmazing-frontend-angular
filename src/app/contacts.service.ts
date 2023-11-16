@@ -16,11 +16,11 @@ export class ContactsService {
 
   }
 
-  getContact(c_id: number): Observable<any> {
+  getContact(contactId: number): Observable<any> {
 
     const url = 'http://localhost:30030/contacts/get';
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
-    const body = JSON.stringify({id: c_id});
+    const body = JSON.stringify({id: contactId});
     return this.http.post(url, body, {headers});
 
   }
@@ -41,6 +41,16 @@ export class ContactsService {
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
     this.http.put(url, body,{headers}).subscribe();
 
+  }
+
+  deleteContact (contactId: number): void {
+    const url = 'http://localhost:30030/contacts/delete';
+    const body = { id: contactId };
+    const options = {
+      body: body,
+      headers: new HttpHeaders()
+    };
+    this.http.delete(url, options).subscribe();
   }
 
 }

@@ -23,7 +23,6 @@ export class ContactHomeComponent implements OnInit {
     private router: Router,
     public dialog: MatDialog
 
-  
   ) {};
 
   ngOnInit(): void { this.contactsService.getContacts().subscribe(data => {this.contacts = data}); }

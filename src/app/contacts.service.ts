@@ -44,6 +44,7 @@ export class ContactsService {
   }
 
   deleteContact (contactId: number): void {
+
     const url = 'http://localhost:30030/contacts/delete';
     const body = { id: contactId };
     const options = {
@@ -51,6 +52,7 @@ export class ContactsService {
       headers: new HttpHeaders()
     };
     this.http.delete(url, options).subscribe();
+    
   }
 
 }

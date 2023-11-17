@@ -43,12 +43,16 @@ export class ChartsComponent implements OnInit {
 
     this.contactService.getContacts().subscribe(contacts => {
 
+      // Contacts methods
+
       this.initialLetter = this.calculateInitialLettersData(contacts); 
       this.contactsByFullName = this.calculateContactsByFullName(contacts);
       this.emailExtensions = this.calculateEmailExtensionsData(contacts);
       this.phonePrfixData = this.generatePhonePrefixData(contacts);
 
     })
+
+    // Products & Categories methods
 
     this.productService.getProducts().subscribe(products => {
 
@@ -59,7 +63,10 @@ export class ChartsComponent implements OnInit {
 
   }
 
-  // Contacts methods
+  // Contacts methods implementation
+
+  // Calculate the number of contacts by last name initial.
+  // Receives a list with all contacts and returns an array of objects with the initial of the last name and the number of contacts.
 
   calculateInitialLettersData(contacts: any[]): any {
 
@@ -78,6 +85,9 @@ export class ChartsComponent implements OnInit {
     }, [] )
 
   }
+
+  // Calculate the number of contacts based on the length of the full name in 5 character ranges.
+  // Receives a list with all contacts and returns an array of objects with the length range and number of contacts.
 
   calculateContactsByFullName (contacts: any[]): any {
 
@@ -116,6 +126,9 @@ export class ChartsComponent implements OnInit {
 
   }
 
+  // Calculate the number of email extensions.
+  // Receives a list of all contacts and returns an array of objects with the email extension and the number of contacts with that extension.
+
   calculateEmailExtensionsData(contacts: any[]): any {
 
     let emailExtensionMap = new Map<string, number>();
@@ -151,6 +164,9 @@ export class ChartsComponent implements OnInit {
     return emailExtensions;
 
   }
+
+  // Calculate how many times each telephone prefix appears.
+  // Receives a list with all contacts and returns an array of objects with the phone prefix and the number of contacts with that prefix.
  
   generatePhonePrefixData(contacts: any[]): any {
 
@@ -181,6 +197,9 @@ export class ChartsComponent implements OnInit {
 
   // Products methods
 
+  // Calculate the number of products for each category.
+  // Number of products for each category. Receives a list with all the products and returns an array of objects with the category name and the number of products.
+
   calculateProductQuantityByCategory(products: any[]): any[] {
 
     const categoriesQuantityData = {};
@@ -198,8 +217,11 @@ export class ChartsComponent implements OnInit {
       value: categoriesQuantityData[categoryName]
 
     }));
-    
+
   }
+
+  // Calculate the price range per category.
+  // Price range by category. Receives a list of all products and returns an array of objects with the category name and price range.
 
   calculatePriceRangeByCategory(products: any[]): any[] {
 

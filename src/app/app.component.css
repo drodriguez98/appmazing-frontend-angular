@@ -6,20 +6,20 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.mat-toolbar.mat-primary {
+mat-toolbar {
     justify-content: center;
-    background: rgba(99, 2, 2, 0.911);
+    background: rgba(68, 35, 67, 0.911);
     color: white;
-    padding: 40px;
+    padding: 50px;
 }
 
-.mat-toolbar.mat-primary a { 
+mat-toolbar a { 
     font-size: 18px; 
     font-family: 'Abel', sans-serif;
     font-family: 'Space Grotesk', sans-serif;
 }
 
-.mat-toolbar.mat-primary a:hover { 
-    color: rgb(211 179 62); 
+mat-toolbar a:hover { 
+    color: rgba(214, 203, 214, 0.8); 
     transition: color 0.5s; 
 }

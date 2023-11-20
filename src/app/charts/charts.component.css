@@ -1,19 +1,28 @@
 .ng-star-inserted { display: flex; }
 
 .card { 
-    margin: 60px auto; 
+    display: flex;
+    flex-direction: column;
+    margin: 75px auto; 
+    padding: 75px;
     width: 75%;
-    box-shadow: 0 0 6px 3px rgba(94, 41, 41, 0.911);
+    box-shadow: 0 0 6px 3px rgba(68, 35, 67, 0.911);
     transform: scale(1); 
+    background-color: rgba(228, 209, 228, 0.25);
 }
 
-.mat-card-title { padding: 40px;}
+.mat-card-title { margin: 20px auto; } 
+
+mat-card-content { margin-top: 50px; }
 
 .chart-row {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 50px;
 }
+
+.chart-row p { font-size: 16px; }
 
 .card:hover { transform: scale(1.02); }
